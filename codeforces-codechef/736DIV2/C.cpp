@@ -44,30 +44,29 @@ void solve()
     cin >> q;
     f(i, q)
     {
-        string x;
-        getline(cin, x);
-        if (x.length() > 1)
+        ll x;
+        cin >> x;
+        if (x == 1)
         {
             ll u, v;
-            u = x[2] - '0';
-            v = x[x.length() - 1] - '0';
+            cin >> u >> v;
             ll min_m = min(u, v);
-            if (x[0] == '1')
+            if (arr[min_m - 1] == 0)
             {
-                if (arr[min_m - 1] == 0)
-                {
-                    ans--;
-                }
-                arr[min_m - 1]++;
+                ans--;
             }
-            else
+            arr[min_m - 1]++;
+        }
+        else if (x == 2)
+        {
+            ll u, v;
+            cin >> u >> v;
+            ll min_m = min(u, v);
+            if (arr[min_m - 1] == 1)
             {
-                if (arr[min_m - 1] <= 1)
-                {
-                    ans++;
-                }
-                arr[min_m - 1]--;
+                ans++;
             }
+            arr[min_m - 1]--;
         }
         else
         {
