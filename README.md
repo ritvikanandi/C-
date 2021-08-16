@@ -3,9 +3,9 @@ Contains solutions to all my solved questions on competitive programming platfor
 
 while(failing){
 
-   Sleep();
-   
    Code();
+   
+   Sleep();
    
    Eat();
    
